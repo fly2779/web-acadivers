@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Renta De Yates | Acapulco Divers Center</title>
+  <link rel="icon" href="favicon.png" type="image/png" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <nav class="navbar">
+    <a href="index.html">
+      <img src="logo.PNG" alt="Buceo Acapulco Logo" class="logo" />
+    </a>
+  </nav>
+
+  <header class="hero">
+    <div class="overlay">
+      <h1>Renta De Yates</h1>
+      <p>¡Aventurate Con Nosotros!</p>
+    </div>
+  </header>
+
+ <section class="servicios-buceo">
+  <div class="iconos-servicios">
+    <div class="card">      <h3>¿Renta de yates?</h3>
+
+      <img src="yat.jpeg" alt="Instructor de buceo" />
+      <img src="yat1.jpeg" alt="Equipo de buceo" />
+      <img src="yat2.jpeg" alt="Prácticas en mar" />
+
+     <p>Renta de yates y lanchas de la mas lujosa calidad de Acapulco </p>
+</div>
+
+  </div>
+</section>
+<section class="contacto">
+    <div class="contacto-container">
+      <h2>¿Listo para comenzar?</h2>
+      <form>
+        <input type="text" placeholder="Tu Nombre" required><br>
+        <input type="email" placeholder="Tu Correo" required><br>
+        <textarea placeholder="Tu Mensaje" rows="5" required></textarea><br>
+        <button type="submit" class="btn">Enviar</button>
+      </form>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2025 Acapulco Divers Center | Cursos de Buceo en Acapulco</p>
+  </footer>
+
+  <!-- JAVASCRIPT PARA DESVANECER EL LOGO -->
+  <script>
+    const logo = document.querySelector('.logo');
+    const servicios = document.querySelector('.servicios-buceo');
+
+    window.addEventListener('scroll', () => {
+      const serviciosTop = servicios.getBoundingClientRect().top;
+
+      if (serviciosTop <= window.innerHeight * 0.5) {
+        logo.classList.add('hide-logo');
+      } else {
+        logo.classList.remove('hide-logo');
+      }
+    });
+  </script>
+
+</body>
+</html>

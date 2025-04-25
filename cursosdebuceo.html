@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cursos de Buceo | Acapulco Divers Center</title>
+  <link rel="icon" href="favicon.png" type="image/png" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <nav class="navbar">
+    <a href="index.html">
+      <img src="logo.PNG" alt="Buceo Acapulco Logo" class="logo" />
+    </a>
+  </nav>
+
+  <header class="hero">
+    <div class="overlay">
+      <h1>Cursos de Buceo</h1>
+      <p>¡Aprende a bucear con expertos certificados en Acapulco!</p>
+    </div>
+  </header>
+
+ <section class="servicios-buceo">
+  <div class="iconos-servicios">
+    <div class="card">
+      <img src="bucepareja.jpeg" alt="Instructor de buceo" />
+      <h3>Instrucción Personalizada</h3>
+      <p>Grupos pequeños con atención directa de instructores certificados.</p>
+    </div>
+    <div class="card">
+      <img src="galeria12.jpg" alt="Equipo de buceo" />
+      <h3>Equipo Profesional</h3>
+      <p>Todo el equipo necesario incluido en el curso.</p>
+    </div>
+    <div class="card">
+      <img src="buce.jpeg" alt="Prácticas en mar" />
+      <h3>Prácticas en el mar</h3>
+      <p>Sumérgete en las aguas de Acapulco desde el primer día.</p>
+    </div>
+  </div>
+</section>
+
+  <section class="contacto">
+    <div class="contacto-container">
+      <h2>¿Listo para comenzar?</h2>
+      <form>
+        <input type="text" placeholder="Tu Nombre" required><br>
+        <input type="email" placeholder="Tu Correo" required><br>
+        <textarea placeholder="Tu Mensaje" rows="5" required></textarea><br>
+        <button type="submit" class="btn">Enviar</button>
+      </form>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2025 Acapulco Divers Center | Cursos de Buceo en Acapulco</p>
+  </footer>
+
+  <!-- JAVASCRIPT PARA DESVANECER EL LOGO -->
+  <script>
+    const logo = document.querySelector('.logo');
+    const servicios = document.querySelector('.servicios-buceo');
+
+    window.addEventListener('scroll', () => {
+      const serviciosTop = servicios.getBoundingClientRect().top;
+
+      if (serviciosTop <= window.innerHeight * 0.5) {
+        logo.classList.add('hide-logo');
+      } else {
+        logo.classList.remove('hide-logo');
+      }
+    });
+  </script>
+
+</body>
+</html>

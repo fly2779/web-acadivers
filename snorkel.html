@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Snorkel | Acapulco Divers Center</title>
+  <link rel="icon" href="favicon.png" type="image/png" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <nav class="navbar">
+    <a href="index.html">
+      <img src="logo.PNG" alt="Buceo Acapulco Logo" class="logo" />
+    </a>
+  </nav>
+
+  <header class="hero">
+    <div class="overlay">
+      <h1>Snorkel</h1>
+      <p>¡Aventurate Con Nosotros!</p>
+    </div>
+  </header>
+
+ <section class="servicios-buceo">
+  <div class="iconos-servicios">
+    <div class="card">
+      <img src="buceo3.jpeg" alt="Instructor de buceo" />
+      <h3>¿Qué es el snorkel?</h3>
+      <p>El snorkel es una actividad acuática que consiste en nadar en la superficie del agua mientras se observa el fondo marino. También se le conoce como buceo con tubo o buceo superficial.  </p>
+    </div>
+    <div class="card">
+      <img src="snor1.jpeg" alt="Equipo de buceo" />
+      <h3>¿Qué diferencia hay entre el buceo y el snorkel?</h3>
+      <p>El buceo es la inmersión en un medio acuático: bien sea en el mar o en la piscina, ya sea con un equipo básico de buceo, uno profesional o sin equipo. Por su parte, el snorkeling es la observación del mar pero al ras del agua o a pocos metros de profundidad</p>
+    </div>
+    <div class="card">
+      <img src="snor2.jpeg" alt="Prácticas en mar" />
+      <h3>¿Cómo se respira bajo el agua con snorkel?</h3>
+      <p>¿Puedes respirar bajo el agua con un snorkel? Respirar con una máscara de snorkel tradicional consiste en tener el tubo de snorkel en la boca que permanece por encima de la línea de flotación. Respira a través del tubo mientras observa los arrecifes a través de aguas poco profundas.</p>
+    </div>
+  </div>
+</section>
+
+<section class="contacto">
+    <div class="contacto-container">
+      <h2>¿Listo para comenzar?</h2>
+      <form>
+        <input type="text" placeholder="Tu Nombre" required><br>
+        <input type="email" placeholder="Tu Correo" required><br>
+        <textarea placeholder="Tu Mensaje" rows="5" required></textarea><br>
+        <button type="submit" class="btn">Enviar</button>
+      </form>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2025 Acapulco Divers Center | Cursos de Buceo en Acapulco</p>
+  </footer>
+
+  <!-- JAVASCRIPT PARA DESVANECER EL LOGO -->
+  <script>
+    const logo = document.querySelector('.logo');
+    const servicios = document.querySelector('.servicios-buceo');
+
+    window.addEventListener('scroll', () => {
+      const serviciosTop = servicios.getBoundingClientRect().top;
+
+      if (serviciosTop <= window.innerHeight * 0.5) {
+        logo.classList.add('hide-logo');
+      } else {
+        logo.classList.remove('hide-logo');
+      }
+    });
+  </script>
+
+</body>
+</html>

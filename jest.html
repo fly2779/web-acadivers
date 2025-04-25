@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title> Jet ski | Acapulco Divers Center</title>
+  <link rel="icon" href="favicon.png" type="image/png" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <nav class="navbar">
+    <a href="index.html">
+      <img src="logo.PNG" alt="Buceo Acapulco Logo" class="logo" />
+    </a>
+  </nav>
+
+  <header class="hero">
+    <div class="overlay">
+      <h1>Jet ski</h1>
+      <p>¡Aventurate Con Nosotros!</p>
+    </div>
+  </header>
+
+ <section class="servicios-buceo">
+  <div class="iconos-servicios">
+  
+    <div class="card">
+      <img src="jets1.jpeg" alt="Equipo de buceo" />
+      <h3>¿Qué es el deporte jet ski?</h3>
+      <p>El jet-ski es un deporte motor-mecánico en el que se maneja un vehículo fabricado con ﬁbra de vidrio con un motor interno de 2 tiempos con unos 150hp de potencia.</p>
+    </div>
+    <div class="card">
+      <img src="jets2.jpeg" alt="Prácticas en mar" />
+      <h3>¿Cuánto corre un jet ski?</h3>
+      <p>Hoy en día existen modelos en los que pueden viajar hasta tres personas, alcanzando velocidades de hasta 120 km/h. El jet ski se ha convertido en una práctica deportiva muy popular, realizándose campeonatos de todo tipo, travesías e incluso copas del mundo.</p>
+    </div>
+  </div>
+</section>
+<section class="contacto">
+    <div class="contacto-container">
+      <h2>¿Listo para comenzar?</h2>
+      <form>
+        <input type="text" placeholder="Tu Nombre" required><br>
+        <input type="email" placeholder="Tu Correo" required><br>
+        <textarea placeholder="Tu Mensaje" rows="5" required></textarea><br>
+        <button type="submit" class="btn">Enviar</button>
+      </form>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2025 Acapulco Divers Center | Cursos de Buceo en Acapulco</p>
+  </footer>
+
+  <!-- JAVASCRIPT PARA DESVANECER EL LOGO -->
+  <script>
+    const logo = document.querySelector('.logo');
+    const servicios = document.querySelector('.servicios-buceo');
+
+    window.addEventListener('scroll', () => {
+      const serviciosTop = servicios.getBoundingClientRect().top;
+
+      if (serviciosTop <= window.innerHeight * 0.5) {
+        logo.classList.add('hide-logo');
+      } else {
+        logo.classList.remove('hide-logo');
+      }
+    });
+  </script>
+
+</body>
+</html>

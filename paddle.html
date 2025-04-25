@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Certificados PADI | Acapulco Divers Center</title>
+  <link rel="icon" href="favicon.png" type="image/png" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <nav class="navbar">
+    <a href="index.html">
+      <img src="logo.PNG" alt="Buceo Acapulco Logo" class="logo" />
+    </a>
+  </nav>
+
+  <header class="hero">
+    <div class="overlay">
+      <h1>Paddle board</h1>
+      <p>¡Aventurate Con Nosotros!</p>
+    </div>
+  </header>
+
+ <section class="servicios-buceo">
+  <div class="iconos-servicios">
+    <div class="card">
+      <img src="pad.jpeg" alt="Instructor de buceo" />
+      <h3>¿Qué significa paddle board?</h3>
+      <p> De todos los deportes acuáticos que se ofrecen en la isla, el Paddle Board es uno de los más novedosos, porque combina habilidades como el equilibrio, la fuerza y la concentración. Este deporte acuático consiste en ingresar al mar con una tabla que flota sobre el agua y un remo ligero</p>
+    </div>
+    <div class="card">
+      <img src="pad1.jpeg" alt="Equipo de buceo" />
+      <h3>¿Qué es un paddle y para qué sirve?
+</h3>
+      <p>El Stand Up Paddle o también conocido como Paddle Surf es una disciplina acuática la cual consiste en el desplazamiento por, normalmente, aguas abiertas, mediante una tabla de tipo surf (pero con diferentes dimensiones) y un remo.</p>
+    </div>
+  </div>
+</section>
+
+<section class="contacto">
+    <div class="contacto-container">
+      <h2>¿Listo para comenzar?</h2>
+      <form>
+        <input type="text" placeholder="Tu Nombre" required><br>
+        <input type="email" placeholder="Tu Correo" required><br>
+        <textarea placeholder="Tu Mensaje" rows="5" required></textarea><br>
+        <button type="submit" class="btn">Enviar</button>
+      </form>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2025 Acapulco Divers Center | Cursos de Buceo en Acapulco</p>
+  </footer>
+
+  <!-- JAVASCRIPT PARA DESVANECER EL LOGO -->
+  <script>
+    const logo = document.querySelector('.logo');
+    const servicios = document.querySelector('.servicios-buceo');
+
+    window.addEventListener('scroll', () => {
+      const serviciosTop = servicios.getBoundingClientRect().top;
+
+      if (serviciosTop <= window.innerHeight * 0.5) {
+        logo.classList.add('hide-logo');
+      } else {
+        logo.classList.remove('hide-logo');
+      }
+    });
+  </script>
+
+</body>
+</html>
