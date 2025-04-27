@@ -1,12 +1,11 @@
-// Obtener el elemento del logo y la sección 'Nuestros Servicios'
+// Obtener el logo y la sección de Servicios
 const logo = document.querySelector('.logo');
 const serviciosSection = document.querySelector('.servicios');
 
-// Función que detecta el scroll y cambia la visibilidad del logo
+// Función para manejar el scroll
 function handleScroll() {
   const serviciosPosition = serviciosSection.getBoundingClientRect().top;
-  
-  // Si la sección 'Nuestros Servicios' está en la pantalla
+
   if (serviciosPosition <= window.innerHeight / 1.5) {
     logo.classList.add('hide-logo');
   } else {
@@ -14,6 +13,5 @@ function handleScroll() {
   }
 }
 
-
-// Agregar el evento de scroll al documento
+// Evento de scroll
 window.addEventListener('scroll', handleScroll);
