@@ -1,4 +1,3 @@
-
 /* --------------------------- */
 /* Estilos Globales */
 /* --------------------------- */
@@ -8,10 +7,21 @@
   box-sizing: border-box;
 }
 
- html, body {
+html, body {
   font-family: Arial, sans-serif;
   overflow-x: hidden;
-  margin: 0;
+}
+
+/* Fondo general */
+body::before {
+  content: "";
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: url('fondo-oceanico.jpg') no-repeat center center fixed;
+  background-size: cover;
+  z-index: -1;
+  opacity: 0.3; /* 0.3 es 30% de opacidad real */
 }
 
 /* --------------------------- */
@@ -35,15 +45,7 @@
   transition: opacity 0.5s ease, transform 0.3s ease;
 }
 
-/* Estilo para ocultar el logo cuando la clase 'hide-logo' se aplica */
 .hide-logo {
-  opacity: 0;
-  transform: scale(0.9);
-  transition: opacity 0.5s ease, transform 0.3s ease;
-}
-
-.navbar.scrolled .logo,
-.navbar.hide-logo .logo {
   opacity: 0;
   transform: scale(0.9);
 }
@@ -83,10 +85,10 @@
   text-decoration: none;
   border-radius: 8px;
   transition: background-color 0.3s;
+  border: none;
+  cursor: pointer;
   display: inline-block;
   margin-top: 15px;
-  border: none; /* Evita borde negro por defecto */
-  cursor: pointer; /* Cambia el mouse a manita */
 }
 
 .btn:hover {
@@ -99,18 +101,16 @@
 .servicios {
   display: flex;
   flex-direction: column;
-  align-items: center; /* Centra los elementos horizontalmente */
-  justify-content: center; /* Centra los elementos verticalmente */
+  align-items: center;
   padding: 60px 20px;
-  text-align: center; /* Centra el texto dentro de los elementos */
+  text-align: center;
 }
 
 .servicios .container {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center; /* Centra las tarjetas horizontalmente */
+  justify-content: center;
   gap: 20px;
-  padding: 0 20px;
 }
 
 .card {
@@ -120,13 +120,16 @@
   border-radius: 12px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s;
+  text-decoration: none;
+  color: inherit;
 }
 
 .card img {
-  width: 100%; /* Las imágenes se ajustarán al tamaño de la tarjeta */
-  height: auto;
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
   border-radius: 8px;
-  margin-bottom: 15px; /* Espaciado entre la imagen y el texto */
+  margin-bottom: 15px;
 }
 
 .card h3 {
@@ -153,7 +156,7 @@
   padding: 20px;
 }
 
-.galeria-grid img {
+.galeria-grid img, .galeria-grid video {
   width: 100%;
   height: 200px;
   object-fit: cover;
@@ -161,15 +164,11 @@
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
 }
 
-.galeria-grid video {
-  width: 100%;
-  height: auto;
-  border-radius: 10px;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
-}
-
+/* --------------------------- */
+/* Contacto */
+/* --------------------------- */
 .contacto {
-  background-image: url('fondo-marino.jpeg'); /* Cambia el nombre si tu imagen se llama diferente */
+  background-image: url('fondo-marino.jpeg');
   background-size: cover;
   background-position: center;
   padding: 50px 20px;
@@ -185,7 +184,7 @@
   position: absolute;
   top: 0; left: 0;
   width: 100%; height: 100%;
-  background-color: rgba(0, 0, 0, 0.4); /* oscurece un poco el fondo para contraste */
+  background-color: rgba(0, 0, 0, 0.4);
   z-index: 1;
 }
 
@@ -194,13 +193,30 @@
   width: 100%;
   position: relative;
   z-index: 2;
-  background: rgba(255, 255, 255, 0.15); /* Fondo blanco semi-transparente */
-  backdrop-filter: blur(10px); /* Efecto glassmorphism */
-  -webkit-backdrop-filter: blur(10px); /* Compatibilidad en Safari */
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
   padding: 30px;
   border-radius: 20px;
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
   color: white;
+}
+
+.contacto-container input,
+.contacto-container textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: none;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.8);
+  font-size: 14px;
+  resize: none;
+}
+
+.contacto-container input::placeholder,
+.contacto-container textarea::placeholder {
+  color: #666;
 }
 
 /* --------------------------- */
@@ -211,7 +227,6 @@ footer {
   color: white;
   text-align: center;
   padding: 30px 10px;
-  position: relative;
 }
 
 .redes-sociales {
@@ -248,39 +263,4 @@ footer {
   .overlay p {
     font-size: 16px;
   }
-
-  .contacto-container input,
-  .contacto-container textarea {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 15px;
-    border: none;
-    border-radius: 10px;
-    background: rgba(255, 255, 255, 0.8);
-    font-size: 14px;
-    resize: none;
-  }
-
-  .contacto-container input::placeholder,
-  .contacto-container textarea::placeholder {
-    color: #666;
-  }
-}/* Fondo general de toda la página */
-body::before {
-  content: "";
-  position: fixed;
-  top: 0; left: 0;
-  width: 100%; height: 100%;
-  background: url('fondo-oceanico.jpg') no-repeat center center fixed; /* Reemplaza con tu imagen */
-  background-size: cover;
-  z-index: -1;
-  opacity: 10; /* Ajusta la opacidad según prefieras */
-}
-.iconos-servicios {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 30px;
-  padding: 40px 20px;
-}
 }
